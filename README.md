@@ -1,1 +1,8 @@
-This just holds my VIM config for now so it can be used other places
+# Dotfiles
+This holds the configs for the things I use. 
+
+Mostly, neovim setup, alacritty setup, .zsh file, and more.
+
+### Things that need to be installed:
+- Homebrew
+- Oh-My-Zsh

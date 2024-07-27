@@ -1,5 +1,3 @@
-require("config.lazy")
-
 -- Set the leader key to space
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
@@ -11,9 +9,6 @@ vim.keymap.set('i', 'jk', '<esc>', { desc = 'Mapping to get back to normal mode 
 vim.opt.hlsearch = true
 vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<CR>', { desc = 'Remove search highlighting by pressing escape'})
 
--- Use system keyboard
-vim.opt.clipboard = 'unnamedplus'
-
 -- Use line numbers
 vim.opt.number = true 
 
@@ -23,9 +18,6 @@ vim.keymap.set('n', '<Leader>r', '<cmd>source $HOME/.config/nvim/init.lua<CR>', 
 -- Case-insensitive searching unless \C or one or more capital letters in the search term
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-
--- Not too sure what this is honestly
-vim.opt.inccommand = 'split'
 
 -- Show which line the cursor is on
 vim.opt.cursorline = true
@@ -39,6 +31,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- For the colorscheme!
-vim.o.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+-- Tabbing stuff
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.softtabstop=2
+vim.opt.shiftwidth=2
+
+-- Pull run the file in /lua/config/lazy.lua
+require("config.lazy")
+
+-- Plugin related keybinds
+vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>", {})

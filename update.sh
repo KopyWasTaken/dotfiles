@@ -6,13 +6,15 @@
 
 rm -r .config
 
+# Copy over the alacritty stuff
 mkdir -p .config/alacritty
 cp ~/.config/alacritty/alacritty.toml .config/alacritty
 
-mkdir -p .config/zsh
-cp ~/.config/zsh/.start .config/zsh
-cp ~/.config/zsh/.zshrc .config/zsh
+# Copy over the zsh stuff 
+rm .zshrc
+scp ~/.zshrc .
 
+# Copy over the neovim config
 mkdir -p .config/nvim
 cp -r ~/.config/nvim/lua .config/nvim/lua
 cp ~/.config/nvim/init.lua .config/nvim

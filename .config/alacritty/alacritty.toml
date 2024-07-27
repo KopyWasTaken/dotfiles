@@ -37,14 +37,15 @@ white    = '#FFFEFF'
 style = { shape = "Block", blinking = "On" }
 
 [env]
-TERM = "alacritty"
+# This isn't working for now. Not sure what the problem is or if it matters
+#TERM = "alacritty"
 
 [font]
 size = 15
 
 [font.normal]
-family = "monospace"
-style = "Medium"
+family = "JetBrainsMono Nerd Font Mono"
+style = "Regular"
 
 [[keyboard.bindings]]
 chars = "\u001BF"

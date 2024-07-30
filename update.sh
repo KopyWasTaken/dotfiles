@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # These aren't needed / used at the moment
 # rm .zshenv

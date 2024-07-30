@@ -1,6 +1,6 @@
 return {
 	{
-    -- highlighting and indenting and what not, makes things easier
+		-- highlighting and indenting and what not, makes things easier
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()

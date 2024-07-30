@@ -4,6 +4,7 @@
 # rm .zshenv
 # cp ~/.zshenv .
 
+# remove everything that currently exists here
 rm -r .config
 
 # Copy over the alacritty stuff

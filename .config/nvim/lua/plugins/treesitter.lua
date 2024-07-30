@@ -1,15 +1,16 @@
 return {
-  {
-    "nvim-treesitter/nvim-treesitter", 
-    build = ":TSUpdate",
-    config = function()
-      local configs = require("nvim-treesitter.configs")
+	{
+    -- highlighting and indenting and what not, makes things easier
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function()
+			local configs = require("nvim-treesitter.configs")
 
-      configs.setup({
-        ensure_installed = { "lua", "c", "java", "cpp" },
-        highlight = { enabled = true },
-        indent = { enabled = true },
-      })
-    end
-  },
+			configs.setup({
+				auto_install = true, -- automatically install language support for files it encounters
+				highlight = { enabled = true },
+				indent = { enabled = true },
+			})
+		end,
+	},
 }

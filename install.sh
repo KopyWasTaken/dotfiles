@@ -20,3 +20,6 @@ mkdir -p $HOME/.config
 
 # move everything into the config 
 cp -r ./.config/* $HOME/.config
+
+# finally, see if you can install sdk man
+curl -s "https://get.sdkman.io" | bash

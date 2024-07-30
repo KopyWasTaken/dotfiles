@@ -7,7 +7,7 @@
 cp .zshrc $HOME/
 
 # Source the Zsh configuration
-source $HOME/.zshrc
+# source $HOME/.zshrc
 
 # Install Homebrew if on Mac
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

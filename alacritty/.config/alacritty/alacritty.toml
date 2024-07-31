@@ -63,3 +63,4 @@ history = 100000
 [window]
 dynamic_title = true
 title = "Alacritty Terminal"
+startup_mode = "Maximized"

@@ -22,6 +22,9 @@ return {
       -- This is the section where we broadcast that we can listen to LSP recommendations, and they should give us recs
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      -- setup java before the rest of lsp config
+      require('java').setup()
+
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
         capabilities = capabilities,

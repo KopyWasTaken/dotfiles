@@ -7,9 +7,10 @@ return {
 
       null_ls.setup({
         sources = {
-          null_ls.builtins.formatting.stylua,           -- formatter for lua
-          null_ls.builtins.formatting.clang_format,     -- formatter for C / C++
-          null_ls.builtins.formatting.google_java_format,     -- formatter for Java
+          null_ls.builtins.formatting.stylua,             -- formatter for lua
+          null_ls.builtins.formatting.clang_format,       -- formatter for C / C++
+          null_ls.builtins.formatting.prettier,           -- formatter for javascript things etc.
+          null_ls.builtins.formatting.pyright, -- formatter for python
         },
       })
 

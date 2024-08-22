@@ -11,7 +11,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", },
+				ensure_installed = { "lua_ls", "clangd", "pyright" },
 			})
 		end,
 	},
@@ -29,11 +29,16 @@ return {
 			lspconfig.clangd.setup({
 				capabilities = capabilities,
 			})
+      lspconfig.pyright.setup({
+        capabilities = capabilities,
+      })
 
-			-- keybindings
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+      -- keybindings
+      vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+      vim.keymap.set("n", "gD", vim.lsp.buf.declaration, {})
+      vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 
       -- switch between source and header for c / c++ files
       vim.keymap.set('n', "<leader>h", "<cmd>:ClangdSwitchSourceHeader<CR>", {})

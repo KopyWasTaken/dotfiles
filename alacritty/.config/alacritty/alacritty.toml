@@ -37,7 +37,7 @@ white    = '#FFFEFF'
 style = { shape = "Block", blinking = "On" }
 
 [env]
-# This isn't working for now. Not sure what the problem is or if it matters
+# this is where all the environment variables go for the shell
 #TERM = "alacritty"
 
 [font]
@@ -64,3 +64,4 @@ history = 100000
 dynamic_title = true
 title = "Alacritty Terminal"
 startup_mode = "Maximized"
+opacity = 0.9

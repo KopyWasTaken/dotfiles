@@ -1,5 +1,4 @@
 live_config_reload = true
-working_directory = "$HOME"
 
 # From iTerm2 Pastel Dark theme
 # Default colors

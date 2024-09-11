@@ -11,7 +11,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "clangd", "pyright", "terraformls", "phpactor", "html" },
+        ensure_installed = { "lua_ls", "clangd", "pyright", "terraformls", "phpactor", "html", "cssls" },
       })
     end,
   },
@@ -44,6 +44,9 @@ return {
           "html",
           "php",
         },
+      })
+      lspconfig.cssls.setup({
+        capabilities = capabilities,
       })
 
       -- keybindings

@@ -42,7 +42,6 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" }, -- default LSP servers
 					{ name = "luasnip" }, -- For luasnip users.
-					{ name = "codium" }, -- for codium AI stuff
 				}, {
 					{ name = "buffer" },
 				}),

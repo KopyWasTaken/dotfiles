@@ -1,0 +1,5 @@
+# Yay is a wrapper for pacman that's nice to use
+pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si

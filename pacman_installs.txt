@@ -1,0 +1,6 @@
+davinci-resolve
+game-devices-udev
+gpu-screen-recorder-ui
+localsend-bin
+spotify
+vesktop-bin

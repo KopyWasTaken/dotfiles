@@ -7,12 +7,12 @@ return {
 
       null_ls.setup({
         sources = {
-          null_ls.builtins.formatting.stylua,  -- formatter for lua
+          null_ls.builtins.formatting.stylua,       -- formatter for lua
           null_ls.builtins.formatting.clang_format, -- formatter for C / C++
-          null_ls.builtins.formatting.prettier, -- formatter for javascript things etc.
-          null_ls.builtins.formatting.phpcsfixer, -- formatter for php
-          null_ls.builtins.formatting.prettier, -- formatter for web dev
-          null_ls.builtins.formatting.black, -- formatter for python 
+          null_ls.builtins.formatting.prettier,     -- formatter for javascript things etc.
+          null_ls.builtins.formatting.phpcsfixer,   -- formatter for php
+          null_ls.builtins.formatting.prettier,     -- formatter for web dev
+          null_ls.builtins.formatting.black,        -- formatter for python
         },
       })
 

@@ -12,7 +12,7 @@ return {
           null_ls.builtins.formatting.prettier, -- formatter for javascript things etc.
           null_ls.builtins.formatting.phpcsfixer, -- formatter for php
           null_ls.builtins.formatting.prettier, -- formatter for web dev
-          null_ls.builtins.formatting.black,   -- formatter for python
+          null_ls.builtins.formatting.ruff,    -- formatter for python
         },
       })
 

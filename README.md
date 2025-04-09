@@ -10,6 +10,7 @@ ex: `stow nvim` - this will sym link the nvim package here to the home directory
 ### Things that need to be installed:
 - Homebrew
 - Oh-My-Zsh
-- SDK Man for managing java
+- SDK Man (for managing java) 
 - A nerd font, specifically `JetBrainsMono Nerd Font Mono` (The Regular Version)
 - Node needs to be installed for some packages and neovim plugins
+- Python, but that should be installed. 3.12 preferred

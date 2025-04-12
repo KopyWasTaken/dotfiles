@@ -7,3 +7,7 @@ wget
 neovim
 stow
 tmux
+fd
+ripgrep
+pipx
+python@3.12

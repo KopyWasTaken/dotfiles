@@ -1,44 +1,37 @@
--- Set the leader key to space
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
+vim.g.mapleader = " "
 
--- Set shortcut to go back to normal mode from insert
-vim.keymap.set('i', 'jk', '<esc>', { desc = 'Mapping to get back to normal mode from insert'})
+-- bootstrap lazy and all plugins
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
--- The other things from my old vim config
-vim.opt.hlsearch = true
-vim.keymap.set('n', '<esc>', '<cmd>nohlsearch<CR>', { desc = 'Remove search highlighting by pressing escape'})
+if not vim.uv.fs_stat(lazypath) then
+  local repo = "https://github.com/folke/lazy.nvim.git"
+  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+end
 
--- Use line numbers
-vim.opt.number = true 
+vim.opt.rtp:prepend(lazypath)
 
--- Keybind to reload the init.vim configs
-vim.keymap.set('n', '<Leader>r', '<cmd>source $HOME/.config/nvim/init.lua<CR>', { desc = 'Reload the nvim config'})
+local lazy_config = require "configs.lazy"
 
--- Case-insensitive searching unless \C or one or more capital letters in the search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+-- load plugins
+require("lazy").setup({
+  {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
+  },
 
--- Show which line the cursor is on
-vim.opt.cursorline = true
+  { import = "plugins" },
+}, lazy_config)
 
--- Keybinds to make split navigation easier.
---  Use CTRL+<hjkl> to switch between windows
---
---  See `:help wincmd` for a list of all window commands
-vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+-- load theme
+dofile(vim.g.base46_cache .. "defaults")
+dofile(vim.g.base46_cache .. "statusline")
 
--- Tabbing stuff
-vim.opt.expandtab = true
-vim.opt.tabstop = 2
-vim.opt.softtabstop=2
-vim.opt.shiftwidth=2
+require "options"
+require "nvchad.autocmds"
 
--- Pull run the file in /lua/config/lazy.lua
-require("config.lazy")
-
--- Plugin related keybinds
-vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal left<CR>", {})
+vim.schedule(function()
+  require "mappings"
+end)

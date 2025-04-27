@@ -36,6 +36,7 @@ installer_packages=(
     "spotify-launcher"
     "uwsm"
     "zsh"
+    "udiskie"
 )
 
 installer_yay=(

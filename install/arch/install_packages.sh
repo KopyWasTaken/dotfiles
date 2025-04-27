@@ -30,6 +30,12 @@ installer_packages=(
     "brightnessctl"
     "networkmanager"
     "wireplumber"
+    "steam"
+    "vesktop"
+    "gamescope"
+    "spotify-launcher"
+    "uwsm"
+    "zsh"
 )
 
 installer_yay=(

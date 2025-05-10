@@ -17,6 +17,7 @@ installer_packages=(
     "firefox"
     "ttf-font-awesome"
     "vim"
+    "neovim"
     "fastfetch"
     "ttf-fira-sans" 
     "ttf-fira-code" 
@@ -37,6 +38,7 @@ installer_packages=(
     "uwsm"
     "zsh"
     "udiskie"
+    "timeshift"
 )
 
 installer_yay=(

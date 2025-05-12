@@ -14,6 +14,8 @@ installer_packages=(
     "qt6-wayland"
     "hyprpaper"
     "hyprlock"
+    "hyprshot"
+    "hyprpicker"
     "firefox"
     "ttf-font-awesome"
     "vim"

@@ -1,0 +1,9 @@
+# TODO Maybe make this a directory with separate files to break everything out into pieces
+
+# Aliases that I use all the time 
+alias vim=nvim
+
+# custom functions
+
+# Add the rust tools to path
+. "$HOME/.cargo/env"

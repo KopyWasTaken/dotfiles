@@ -45,6 +45,23 @@
         "on-click-right": "~/.config/ml4w/scripts/keybindings.sh",
         "tooltip": false
     },
+
+    "custom/timer": {
+        "exec": "~/.config/hypr/scripts/waybar_timer hook",
+        "exec-on-event": false,
+        "return-type": "json",
+        "format": "{icon} {0}",
+        "format-icons": {
+            "standby": "STANDBY",
+            "running": "RUNNING",
+            "paused": "PAUSE"
+        },
+        "on-click": "~/.config/hypr/scripts/waybar_timer new 25 'notify-send \"Session finished\"'",
+        "on-click-middle": "~/.config/hypr/scripts/waybar_timer cancel",
+        "on-click-right": "~/.config/hypr/scripts/waybar_timer togglepause",
+        "on-scroll-up": "~/.config/hypr/scripts/waybar_timer increase 60 || ~/.config/hypr/scripts/waybar_timer new 1 'notify-send -u critical \"Timer expired\"'",
+        "on-scroll-down": "~/.config/hypr/scripts/waybar_timer decrease 60"
+    },
     
     // Power Menu
     "custom/exit": {

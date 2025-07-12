@@ -2,8 +2,7 @@
 
 # Aliases that I use all the time 
 alias vim=nvim
+alias ls="ls --color=auto"
 
 # custom functions
 
-# Add the rust tools to path
-. "$HOME/.cargo/env"

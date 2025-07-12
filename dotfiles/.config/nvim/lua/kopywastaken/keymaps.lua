@@ -1,0 +1,27 @@
+-- Where my keymappings live
+print("Running keymaps.lua...")
+
+-- Default behavioral stuff
+vim.keymap.set('i', 'jk', '<Esc>', { desc = 'jk to escape' })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Moves the visual line down" })
+vim.keymap.set("v", "K", ":m '>-2<CR>gv=gv", { desc = "Moves the visual line up" })
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Netrw (file navigator)" })
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Appends the line below to the current line" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format)
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
+vim.keymap.set('n', 'Q', "<Nop>", { desc = "I don't like macros screwing things up" })
+
+-- Telescope fuzzy finder
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = "Telescope find files" })
+vim.keymap.set('n', '<leader>fw', telescope.live_grep, { desc = "Telescope live grep" })
+
+-- Alright I'm not sure what the following do
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Goes to the bottom of the page and ?" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Goes to the top of the page and ?" })
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "idk man but people say it's goated" })
+
+print("Done running keymaps.lua")

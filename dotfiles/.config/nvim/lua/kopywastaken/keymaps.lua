@@ -1,5 +1,4 @@
 -- Where my keymappings live
-print("Running keymaps.lua...")
 
 -- Default behavioral stuff
 vim.keymap.set('i', 'jk', '<Esc>', { desc = 'jk to escape' })
@@ -24,4 +23,3 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Goes to the bottom of the page
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Goes to the top of the page and ?" })
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "idk man but people say it's goated" })
 
-print("Done running keymaps.lua")

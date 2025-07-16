@@ -23,3 +23,8 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Goes to the bottom of the page
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Goes to the top of the page and ?" })
 vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "idk man but people say it's goated" })
 
+-- Move to window using the <ctrl> hjkl keys
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = true })

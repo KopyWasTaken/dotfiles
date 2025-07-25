@@ -8,9 +8,9 @@ return {
                 -- Automatically install TS languages
                 auto_install = true,
 
-                indent = {
-                    enable = true,
-                },
+                -- indent = {
+                --     enable = true,
+                -- },
 
                 -- obv we want highlighting when finding things
                 highlight = {

@@ -12,6 +12,11 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 vim.keymap.set('n', 'Q', "<Nop>", { desc = "I don't like macros screwing things up" })
+vim.keymap.set('n', '<leader>ec', ':e ~/.config/nvim <CR>') -- Edit config bind
+vim.keymap.set('n', '<leader>dv', function()
+    local new_config = not vim.diagnostic.config().virtual_lines
+    vim.diagnostic.config({ virtual_lines = new_config })
+end, { desc = 'Toggle diagnostic virtual_lines' })
 
 -- Telescope fuzzy finder
 local telescope = require('telescope.builtin')

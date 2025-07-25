@@ -8,8 +8,8 @@ return {
             require("tokyonight").setup({
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
-                style = "moon",        -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
-                transparent = false,     -- Enable this to disable setting the background color
+                style = "moon",         -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
+                transparent = false,    -- Enable this to disable setting the background color
                 terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
                 styles = {
                     -- Style to be applied to different syntax groups
@@ -22,7 +22,27 @@ return {
                 },
             })
 
-            vim.cmd("colorscheme tokyonight")
+            -- vim.cmd("colorscheme tokyonight")
+        end
+    },
+    {
+        "ellisonleao/gruvbox.nvim",
+        priority = 1000,
+        config = function()
+            require("gruvbox").setup({
+                terminal_colors = true,
+                transparent_mode = false,
+                opts = {
+                    italic = {
+                        strings = true,
+                        comments = true,
+                        operators = false,
+                    },
+                },
+            })
+
+            vim.o.background = "dark"
+            vim.cmd("colorscheme gruvbox")
         end
     },
 }

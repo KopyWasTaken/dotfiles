@@ -1,13 +1,7 @@
 # Include patterns
 + alacritty/***
-+ dunst/***
-+ hypr/***
-+ ml4w/***
 + nvim/***
-+ rofi/***
 + scripts/***
-+ Thunar/***
-+ waybar/***
-+ xlogout/***
+
 # Exclude everything else
 - /**

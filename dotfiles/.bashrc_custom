@@ -4,6 +4,9 @@
 alias vim=nvim
 alias n=nvim
 alias ls="ls --color=auto"
+alias backup_config="~/dotfiles/dotfiles/.config/scripts/backup_config.sh"
+alias apply_config="~/dotfiles/dotfiles/.config/scripts/apply_config.sh"
+
 
 # custom functions
 

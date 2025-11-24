@@ -36,3 +36,6 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to Right Window", remap = tr
 
 -- Extend visual mode to search for highlighted text
 vim.keymap.set("v", "/", "y/<C-R>\"<CR>", { desc = "Search for highlighted text", remap = true })
+
+-- Running commands and terminal toggles 
+vim.keymap.set("n", "!", ":!", { desc = "Run a shell command" })

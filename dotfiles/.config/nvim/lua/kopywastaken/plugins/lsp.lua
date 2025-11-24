@@ -24,17 +24,16 @@ return {
         require("fidget").setup({}) -- setup fidget
         require("mason").setup({})  -- setup mason
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "ts_ls" },
+            ensure_installed = { "lua_ls", "clangd" },
             handlers = {
                 function(server_name) -- default server handler
-                    require("lspconfig")[server_name].setup {
+                    vim.lsp.config(server_name, {
                         capabilities = capabilities
-                    }
+                    })
                 end,
 
                 ["lua_ls"] = function()
-                    local lspconfig = require("lspconfig")
-                    lspconfig.lua_ls.setup {
+                    vim.lsp.config("lua_ls", {
                         capabilities = capabilities,
                         settings = {
                             Lua = {
@@ -43,7 +42,7 @@ return {
                                 }
                             }
                         }
-                    }
+                    })
                 end,
             }
         }) -- setup mason-lspconfig

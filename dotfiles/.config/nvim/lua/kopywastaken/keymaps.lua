@@ -39,3 +39,14 @@ vim.keymap.set("v", "/", "y/<C-R>\"<CR>", { desc = "Search for highlighted text"
 
 -- Running commands and terminal toggles 
 vim.keymap.set("n", "!", ":!", { desc = "Run a shell command" })
+
+-- Open a terminal in a horizontal split
+vim.keymap.set('n', '<leader>th', ':split | terminal<CR>', { desc = "Open terminal in horizontal split" })
+
+-- set keymaps for code-companion.nvim
+vim.keymap.set({ "n", "v" }, "<leader>aa", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "<leader>ai", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+vim.keymap.set("v", "ga", "<cmd>CodeCompanionChat Add<cr>", { noremap = true, silent = true })
+
+-- Expand 'cc' into 'CodeCompanion' in the command line
+vim.cmd([[cab cc CodeCompanion]])
